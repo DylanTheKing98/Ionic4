@@ -1,16 +1,29 @@
-# Ionic4 - Vanilla Javascript Example
-Ionic 4 components https://ionicframework.com/docs/components
+# Framework7 PhoneGap Application 
 
-Using Adobe PhoneGap Developer Desktop & Mobile Apps to Test & Compile https://phonegap.com/
+> [Framework7](http://www.idangero.us/framework7) is a Mobile UI framework that can be used to build hybrid apps with PhoneGap. This template allows you to get started using Framework7 
+  quickly. 
+  
+  For a more extensive Framework7 sample, see the [one included in their Github project](https://github.com/nolimits4web/Framework7/tree/master/dist)
+  or the [demo apps on their website](http://www.idangero.us/framework7/apps/#.VpQCc5MrKjQ).
+    
+  Also, for an intro to Framework7, check out [this post on the PhoneGap blog](http://phonegap.com/blog/2015/11/30/framework7/).   
 
-Download & Extract PhoneGap Desktop App (The default one on their website did not work for me) https://1drv.ms/u/s!AlfeCLUWjs1UvGDLmykF4DMSwB4y?e=gngxPs thanks to passariello in https://github.com/phonegap/phonegap-app-desktop/issues/739
 
-iOS PhoneGap Developer Mobile App https://blog.phonegap.com/update-on-the-phonegap-developer-app-ios-99e07e3309dd for android you can install from Google Play
+## Usage
+    
+### PhoneGap CLI
 
-WebSite Found:
+    $ phonegap create my-app --template phonegap-template-framework7
 
-https://medium.com/@david.dalbusco/using-ionic-without-any-frameworks-775dc757e5e8
+### Cordova CLI
 
-https://www.joshmorony.com/stack-based-navigation-push-pop-with-ionic-web-components/  (Background Info)
+    $ cordova create my-app --template phonegap-template-framework7
+    
+### Desktop
 
-https://www.joshmorony.com/topics/ionic-tutorials/ (Not all relevant to vanilla but good background info)
+In your browser, open the file:
+
+    /www/index.html
+
+
+  
