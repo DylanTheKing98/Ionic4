@@ -1,5 +1,5 @@
-# Ionic4
-Ionic 4 - Vanilla Javascript Example  (https://ionicframework.com/docs/components)
+# Ionic4 - Vanilla Javascript Example
+Ionic 4 components https://ionicframework.com/docs/components
 
 Using Adobe PhoneGap Developer Desktop & Mobile Apps to Test & Compile https://phonegap.com/
 
