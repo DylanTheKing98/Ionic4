@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@4.7.4/dist/ionic/ionic.esm.js"></script>
+   <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@4.7.4/dist/ionic/ionic.js"></script>
+   <link rel="stylesheet" href="../Assets/Ionic.css">
+   <link rel="stylesheet" href="../Assets/myAppCSS.css">
+</head>
+
+<body>
+   <ion-app>
+      <div main>
+         <!-- HEADER / TOOLBAR -->
+         <ion-header>
+            <ion-toolbar color="primary">
+               <!-- Toolbar - Search button -->
+               <ion-buttons slot="secondary">
+                  <ion-button style="background-color: rgb(255, 233, 110)">
+                     <a href="/App/Index.html">
+                        <ion-icon slot="icon-only" name="search"></ion-icon>
+                     </a>
+                  </ion-button>
+               </ion-buttons>
+               <!-- Toolbar - More info button -->
+               <ion-buttons slot="primary">
+                  <ion-button onclick="openEnd()">
+                     <ion-icon slot="icon-only" name="more"></ion-icon>
+                  </ion-button>
+               </ion-buttons>
+            </ion-toolbar>
+         </ion-header>
+         <!-- End of Header -->
+         <!-- CONTENT -->
+         <ion-content fullscreen>
+            <ion-list>
+               <ion-list-header>Sponsored Ads</ion-list-header>
+               <x-loop name="SearchResults">
+                  <!-- ***Priority Listing Results*** -->
+                  <x-priority>
+                     <ion-item color="light" class="ion-margin" href="ClientProfile.html">
+                        <ion-thumbnail slot="end">
+                           <a href="../@2?Cli_ReferenceNumber=_Cli_ReferenceNumber_">__CliBrandButton_</a>
+                        </ion-thumbnail>
+                        <ion-label>
+                           <h3><a href="../__CliWebURL_">_Cli_BusinessName_</a></h3>
+                           <h7>_Cli_Location_</h7><br>
+                           <h7>__CliNotes250_</h7>
+                           <div class="background-color">
+                              <ion-button size="small" color="primary" fill="clear">
+                                 <ion-icon ios="ios-contact" md="md-contact"></ion-icon>
+                              </ion-button>
+                              <x-include name="isDirections">
+                                 <a href="javascript:GetDrivingDirections('_Cli_ReferenceNumber_', '__CliGeoAddress_')">
+                                    <ion-button size="small" color="primary" fill="clear">
+                                       <ion-icon ios="ios-navigate" md="md-navigate"></ion-icon>
+                                    </ion-button>
+                                 </a>
+                              </x-include>
+                              <x-include name="Cli_EMailAddress">
+                                 <a href="JavaScript:sendMessage('_Cli_ReferenceNumber_')">
+                                    <ion-button size="small" color="primary" fill="clear">
+                                       <ion-icon ios="ios-chatbubbles" md="md-chatbubbles"></ion-icon>
+                                 </a>
+                              </x-include>
+                              <x-include name="Cli_URLAddress">
+                                 <ion-button size="small" color="primary" fill="clear" href="../@2?ajax=22&amp;Ref=_Cli_ReferenceNumber_">
+                                    <ion-icon ios="ios-globe" md="md-globe"></ion-icon>
+                                 </ion-button>
+                              </x-include>
+                              <x-include>
+                              </x-include>
+                           </div>
+                        </ion-label>
+                     </ion-item>
+                  </x-priority>
+                  <!-- ***Free Listing Results*** -->
+                  <x-free>
+                     <ion-item class="ion-margin" href="ClientProfile.html">
+                        <ion-label>
+                           <h3><a href="../__CliWebURL_">_Cli_BusinessName_</a></h3>
+                           <h7>_Cli_Location_</h7><br>
+                           <h7>__CliNotes250_</h7>
+                           <div>
+                              <ion-button class="fancy-button" fill="clear" size="large" onclick="test()">
+                                 <ion-icon ios="ios-contact" md="md-contact"></ion-icon>
+                              </ion-button>
+                              <x-include name="isDirections">
+                                 <a href="javascript:GetDrivingDirections('_Cli_ReferenceNumber_', '__CliGeoAddress_')">
+                                    <ion-button color="primary" fill="clear" size="large">
+                                       <ion-icon ios="ios-navigate" md="md-navigate"></ion-icon>
+                                 </a>
+                              </x-include>
+                              <x-include name="Cli_EMailAddress">
+                                 <a href="JavaScript:sendMessage('_Cli_ReferenceNumber_')">
+                                    <ion-button color="primary" fill="clear" size="large">
+                                       <ion-icon ios="ios-chatbubbles" md="md-chatbubbles"></ion-icon>
+                                 </a>
+                              </x-include>
+                              <x-include name="Cli_URLAddress">
+                                 <a href="../@2?ajax=2&amp;Ref=_Cli_ReferenceNumber_" target="_blank">
+                                    <ion-button color="primary" fill="clear" size="large">
+                                       <ion-icon ios="ios-globe" md="md-globe"></ion-icon>
+                                 </a>
+                              </x-include>
+                              <x-include>
+                              </x-include>
+                           </div>
+                        </ion-label>
+                     </ion-item>
+                  </x-free>
+               </x-loop>
+            </ion-list>
+         </ion-content>
+         <!-- End of Content -->
+      </div>
+      <!-- SIDE MENU -->
+      <ion-menu side="end" type="push" menu-id="saYellowMenu">
+         <ion-header>
+            <ion-toolbar color="primary">
+               <ion-title>Menu</ion-title>
+            </ion-toolbar>
+         </ion-header>
+         <ion-content>
+            <ion-list>
+               <ion-item href="../Index.html">
+                  <ion-label><span>
+                        <ion-icon name="home" slot="start"></ion-icon>
+                     </span>Home</ion-label>
+               </ion-item>
+               <ion-item href="SearchResults.html">
+                  <ion-label><span>
+                        <ion-icon name="home" slot="start"></ion-icon>
+                     </span>Search Results</ion-label>
+               </ion-item>
+               <ion-item href="../Search/ClientProfile.html">
+                  <ion-label><span>
+                        <ion-icon name="home" slot="start"></ion-icon>
+                     </span>Client Profile</ion-label>
+               </ion-item>
+               <ion-item href="../Search/Cards.html">
+                  <ion-label><span>
+                        <ion-icon name="home" slot="start"></ion-icon>
+                     </span>Cards</ion-label>
+               </ion-item>
+               <ion-item href="../Support/SignIn.html">
+                  <ion-label><span>
+                        <ion-icon name="home" slot="start"></ion-icon>
+                     </span>Sign In</ion-label>
+               </ion-item>
+               <ion-item href="../Support/LostPassword.html">
+                  <ion-label><span>
+                        <ion-icon name="home" slot="start"></ion-icon>
+                     </span>LostPassword</ion-label>
+               </ion-item>
+               <ion-item href="../Support/Register.html">
+                  <ion-label><span>
+                        <ion-icon name="home" slot="start"></ion-icon>
+                     </span>Register</ion-label>
+               </ion-item>
+               <ion-item href="../Grid.html">
+                  <ion-label><span>
+                        <ion-icon name="home" slot="start"></ion-icon>
+                     </span>Grid</ion-label>
+               </ion-item>
+               <ion-item href="../Input.html">
+                  <ion-label><span>
+                        <ion-icon name="home" slot="start"></ion-icon>
+                     </span>Input</ion-label>
+               </ion-item>
+               <ion-item href="../Slides.html">
+                  <ion-label><span>
+                        <ion-icon name="home" slot="start"></ion-icon>
+                     </span>Slides</ion-label>
+               </ion-item>
+               <ion-item href="../Tabs.html">
+                  <ion-label><span>
+                        <ion-icon name="home" slot="start"></ion-icon>
+                     </span>Tabs</ion-label>
+               </ion-item>
+               <ion-item href="../Avatar.html">
+                  <ion-label><span>
+                        <ion-icon name="home" slot="start"></ion-icon>
+                     </span>Avatar</ion-label>
+               </ion-item>
+               <ion-item href="../Segment.html">
+                  <ion-label><span>
+                        <ion-icon name="home" slot="start"></ion-icon>
+                     </span>Segment</ion-label>
+               </ion-item>
+               <ion-item href="../Buttons.html">
+                  <ion-label><span>
+                        <ion-icon name="home" slot="start"></ion-icon>
+                     </span>Buttons</ion-label>
+               </ion-item>
+               <ion-item href="../Alert.html">
+                  <ion-label><span>
+                        <ion-icon name="home" slot="start"></ion-icon>
+                     </span>Alert</ion-label>
+               </ion-item>
+               <ion-item href="../Router.html">
+                  <ion-label><span>
+                        <ion-icon name="home" slot="start"></ion-icon>
+                     </span>Router</ion-label>
+               </ion-item>
+               <ion-item href="../Modal.html">
+                  <ion-label><span>
+                        <ion-icon name="home" slot="start"></ion-icon>
+                     </span>Modal</ion-label>
+               </ion-item>
+            </ion-list>
+         </ion-content>
+         <!-- End of Content -->
+      </ion-menu>
+      <!-- End of Side Menu -->
+      <ion-menu-controller></ion-menu-controller>
+      <ion-alert-controller></ion-alert-controller>
+   </ion-app>
+</body>
+<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="../Assets/myScripts.js"></script>
+<script>
+   function test() {
+      console.log('aa')
+   }
+</script>
+
+</html>

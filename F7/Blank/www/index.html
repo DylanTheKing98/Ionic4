@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@4.7.4/dist/ionic/ionic.esm.js"></script>
+   <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@4.7.4/dist/ionic/ionic.js"></script>
+   <link rel="stylesheet" href="Assets/Ionic.css">
+   <link rel="stylesheet" href="Assets/myAppCSS.css">
+   <style>
+      :root {
+         --ion-safe-area-top: 0px;
+         --ion-safe-area-bottom: 0px;
+      }
+   </style>
+</head>
+
+<body>
+   <ion-app class="md ion-page hydrated">
+      <div main>
+         <!-- HEADER / TOOLBAR -->
+         <ion-header>
+            <ion-toolbar color="primary">
+               <!-- Toolbar - Search button -->
+               <ion-buttons slot="start">
+                  <ion-button style="background-color: rgb(255, 233, 110)">
+                     <a href="SAYellow.html">
+                        <ion-icon slot="icon-only" name="search"></ion-icon>
+                     </a>
+                  </ion-button>
+               </ion-buttons>
+               <!-- Toolbar - More info button -->
+               <ion-buttons slot="primary">
+                  <ion-button onclick="openSAYellowMenu()">
+                     <ion-icon slot="icon-only" name="more"></ion-icon>
+                  </ion-button>
+               </ion-buttons>
+               <!-- Toolbar Title -->
+               <ion-title>saYellow.com</ion-title>
+            </ion-toolbar>
+         </ion-header>
+         <!-- CONTENT -->
+         <ion-content fullscreen>
+            <!-- TABS -->
+            <ion-tabs>
+               <!-- Tabs content - Search Bar -->
+               <ion-tab tab="tab-search">
+                  <ion-header translucent>
+                     <ion-toolbar>
+                        <ion-title>Search</ion-title>
+                     </ion-toolbar>
+                  </ion-header>
+                  <ion-content fullscreen class="ion-padding">
+                     <!-- Searchbar -->
+                     <form id="qForm" action="/@2" method="post">
+                        <input id="qCode" name="c" type="hidden" value="">
+                        <input id="lCode" name="l" type="hidden" value="">
+                        <input id="LatLng" name="g" type="hidden" value="">
+                        <input id="q" name="q" class="sb-input" placeholder="What are you looking for?" type="search" value="" data-url="@2?ajax=1&q=" data-TypeAhead="true" data-autoSubmit="true">
+                     </form>
+                     <!-- Categories -->
+                     <h3>Categories</h3>
+                     <ion-grid>
+                        <ion-row class="ion-margin-bottom">
+                           <ion-col class="ion-padding light-border ion-text-center">
+                              <ion-router>
+                                 <ion-route component>
+                                    <ion-icon name="star" style="font-size: 200%"></ion-icon><br>
+                                    <a href="/App/Search/SearchResults03.html"> Beauty </a>
+                                 </ion-route>
+                              </ion-router>
+                           </ion-col>
+                           <ion-col offset="1" class="ion-padding light-border ion-text-center">
+                              <ion-icon name="star" style="font-size: 200%"></ion-icon><br>
+                              <a href="/App/Search/ClientProfile03.html"> Beauty </a>
+                           </ion-col>
+                        </ion-row>
+                        <ion-row class="ion-margin-bottom">
+                           <ion-col class="ion-padding light-border ion-text-center">
+                              <ion-icon name="star" style="font-size: 200%"></ion-icon><br>
+                              <a href="/App/Search/ClientProfile03.html"> Beauty </a>
+                           </ion-col>
+                           <ion-col offset="1" class="ion-padding light-border ion-text-center">
+                              <ion-icon name="star" style="font-size: 200%"></ion-icon><br>
+                              <a href="/App/Search/ClientProfile03.html"> Beauty </a>
+                           </ion-col>
+                        </ion-row>
+                        <ion-row>
+                           <ion-col class="ion-padding light-border ion-text-center">
+                              <ion-icon name="star" style="font-size: 200%"></ion-icon><br>
+                              <a href="/App/Search/ClientProfile03.html"> Beauty </a>
+                           </ion-col>
+                           <ion-col offset="1" class="ion-padding light-border ion-text-center">
+                              <ion-icon name="star" style="font-size: 200%"></ion-icon><br>
+                              <a href="/App/Search/ClientProfile03.html"> Beauty </a>
+                           </ion-col>
+                        </ion-row>
+                     </ion-grid>
+                     <!-- Useful Tools -->
+                     <h3>Useful Tools</h3>
+                     <ion-grid>
+                        <ion-row>
+                           <ion-col class="ion-text-center ion-padding" style="background-color: gold">
+                              <ion-icon name="flame" style="font-size: 200%"></ion-icon>
+                           </ion-col>
+                           </ion-col>
+                           <ion-col class="ion-text-center ion-padding" style="background-color: gold">
+                              <ion-icon name="medkit" style="font-size: 200%"></ion-icon>
+                           </ion-col>
+                           <ion-col class="ion-text-center ion-padding" style="background-color: gold">
+                              <ion-icon name="beer" style="font-size: 200%"></ion-icon>
+                           </ion-col>
+                           <ion-col class="ion-text-center ion-padding" style="background-color: gold">
+                              <ion-icon name="beer" style="font-size: 200%"></ion-icon>
+                           </ion-col>
+                        </ion-row>
+                     </ion-grid>
+                  </ion-content>
+               </ion-tab>
+               <!-- Tabs content - Shortlist  -->
+               <ion-tab tab="tab-shortlist">
+                  <ion-header translucent>
+                     <ion-toolbar>
+                        <ion-title>Shortlist</ion-title>
+                     </ion-toolbar>
+                  </ion-header>
+                  <ion-content fullscreen class="ion-padding">
+                     <h3>Shortlist content</h3>
+                     <a href="SAYellow.html">Home</a>
+                  </ion-content>
+               </ion-tab>
+               <!-- Tabs content - Profile  -->
+               <ion-tab tab="tab-profile">
+                  <ion-header translucent>
+                     <ion-toolbar>
+                        <ion-title>Profile</ion-title>
+                     </ion-toolbar>
+                  </ion-header>
+                  <ion-content fullscreen class="ion-padding">
+                     <h3>Profile content</h3>
+                     <ion-list>
+                        <ion-item detail>
+                           <ion-router-link href="#">
+                              <ion-label>Location Services</ion-label>
+                           </ion-router-link>
+                        </ion-item>
+                        <ion-item detail>
+                           <ion-router-link href="Support/Legal03.html">
+                              <ion-label>Terms & Use of Privacy Policy</ion-label>
+                           </ion-router-link>
+                        </ion-item>
+                        <ion-item detail>
+                           <ion-router-link href="Support/ContentAndCookiePolicy03.html">
+                              <ion-label>Content & Cookie Policy</ion-label>
+                           </ion-router-link>
+                        </ion-item>
+                        <ion-item detail>
+                           <ion-router-link href="Support/TermsAndConditions03.html">
+                              <ion-label>General Terms & Conditions</ion-label>
+                           </ion-router-link>
+                        </ion-item>
+                        <ion-item detail="false">
+                           <ion-label>Version : 3.1</ion-label>
+                        </ion-item>
+                        <ion-item lines="none">
+                           <p>The saYellow.com name, and associated names and logos are trade marks of saYellow.com or its affiliates. All rights reserved.</p>
+                        </ion-item>
+                     </ion-list>
+                  </ion-content>
+               </ion-tab>
+               <!-- Tabs content - About  -->
+               <ion-tab tab="tab-about">
+                  <ion-header translucent>
+                     <ion-toolbar>
+                        <ion-title>About</ion-title>
+                     </ion-toolbar>
+                  </ion-header>
+                  <ion-content fullscreen class="ion-padding">
+                     <h3>About saYellow</h3>
+                  </ion-content>
+               </ion-tab>
+               <!-- TABS - BOTTOM BAR MENU -->
+               <ion-tab-bar slot="bottom">
+                  <ion-tab-button tab="tab-search">
+                     <ion-icon name="search"></ion-icon>
+                     <ion-label>Search</ion-label>
+                  </ion-tab-button>
+                  <ion-tab-button tab="tab-shortlist">
+                     <ion-icon name="contacts"></ion-icon>
+                     <ion-label>Shortlist</ion-label>
+                     <ion-badge color="secondary">6</ion-badge>
+                  </ion-tab-button>
+                  <ion-tab-button tab="tab-profile">
+                     <ion-icon name="map"></ion-icon>
+                     <ion-label>Profile</ion-label>
+                  </ion-tab-button>
+                  <ion-tab-button tab="tab-about">
+                     <ion-icon name="information-circle"></ion-icon>
+                     <ion-label>About</ion-label>
+                  </ion-tab-button>
+               </ion-tab-bar>
+            </ion-tabs>
+         </ion-content>
+         <!-- End of Content -->
+      </div>
+      <!-- SIDE MENU -->
+      <ion-menu side="end" type="push" menu-id="saYellowMenu">
+         <ion-header>
+            <ion-toolbar color="primary">
+               <ion-title>Menu</ion-title>
+            </ion-toolbar>
+         </ion-header>
+         <ion-content>
+            <ion-list>
+               <ion-item href="Index.html">
+                  <ion-label><span>
+                        <ion-icon name="home" slot="start"></ion-icon>
+                     </span>Home</ion-label>
+               </ion-item>
+               <ion-item href="../App/Search/SearchResults03.html">
+                  <ion-label><span>
+                        <ion-icon name="home" slot="start"></ion-icon>
+                     </span>Search Results</ion-label>
+               </ion-item>
+               <ion-item href="../App/Search/ClientProfile03.html">
+                  <ion-label><span>
+                        <ion-icon name="home" slot="start"></ion-icon>
+                     </span>Client Profile</ion-label>
+               </ion-item>
+               <ion-item href="../App/Support/SignIn03.html">
+                  <ion-label><span>
+                        <ion-icon name="home" slot="start"></ion-icon>
+                     </span>Sign In</ion-label>
+               </ion-item>
+               <ion-item href="../App/Support/LostPassword03.html">
+                  <ion-label><span>
+                        <ion-icon name="home" slot="start"></ion-icon>
+                     </span>LostPassword</ion-label>
+               </ion-item>
+               <ion-item href="../App/Support/AlreadyListed03.html">
+                  <ion-label><span>
+                        <ion-icon name="home" slot="start"></ion-icon>
+                     </span>Register</ion-label>
+               </ion-item>
+               <ion-item href="../App/Grid.html">
+                  <ion-label><span>
+                        <ion-icon name="home" slot="start"></ion-icon>
+                     </span>Grid</ion-label>
+               </ion-item>
+               <ion-item href="../App/Input.html">
+                  <ion-label><span>
+                        <ion-icon name="home" slot="start"></ion-icon>
+                     </span>Input</ion-label>
+               </ion-item>
+               <ion-item href="../App/Slides.html">
+                  <ion-label><span>
+                        <ion-icon name="home" slot="start"></ion-icon>
+                     </span>Slides</ion-label>
+               </ion-item>
+               <ion-item href="../App/Tabs.html">
+                  <ion-label><span>
+                        <ion-icon name="home" slot="start"></ion-icon>
+                     </span>Tabs</ion-label>
+               </ion-item>
+               <ion-item href="../App/Avatar.html">
+                  <ion-label><span>
+                        <ion-icon name="home" slot="start"></ion-icon>
+                     </span>Avatar</ion-label>
+               </ion-item>
+               <ion-item href="../App/Segment.html">
+                  <ion-label><span>
+                        <ion-icon name="home" slot="start"></ion-icon>
+                     </span>Segment</ion-label>
+               </ion-item>
+               <ion-item href="../App/Buttons.html">
+                  <ion-label><span>
+                        <ion-icon name="home" slot="start"></ion-icon>
+                     </span>Buttons</ion-label>
+               </ion-item>
+               <ion-item href="../App/Alert.html">
+                  <ion-label><span>
+                        <ion-icon name="home" slot="start"></ion-icon>
+                     </span>Alert</ion-label>
+               </ion-item>
+               <ion-item href="../App/Router.html">
+                  <ion-label><span>
+                        <ion-icon name="home" slot="start"></ion-icon>
+                     </span>Router</ion-label>
+               </ion-item>
+               <ion-item href="../App/Modal.html">
+                  <ion-label><span>
+                        <ion-icon name="home" slot="start"></ion-icon>
+                     </span>Modal</ion-label>
+               </ion-item>
+            </ion-list>
+         </ion-content>
+      </ion-menu>
+      <!-- End of Side Menu -->
+   </ion-app>
+   <ion-menu-controller></ion-menu-controller>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <script defer src="https://cdn.sayellow.com/assets/JS14.js"></script>
+   <script>
+   const menuCtrl = document.querySelector('ion-menu-controller');
+
+   function openSAYellowMenu() {
+      menuCtrl.open('saYellowMenu');
+   }
+</script>
+</body>
+
+</html>

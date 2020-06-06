@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@4.7.4/dist/ionic/ionic.esm.js"></script>
+   <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@4.7.4/dist/ionic/ionic.js"></script>
+   <link rel="stylesheet" href="Assets/Ionic.css">
+   <link rel="stylesheet" href="Assets/myAppCSS.css">
+</head>
+<style>
+   :root {
+      --ion-safe-area-top: 10px;
+      --ion-safe-area-bottom: 12px;
+   }
+
+   .my-custom-menu {
+      --width: 500px;
+   }
+</style>
+
+<body>
+   <ion-app>
+      <div main>
+         <!-- HEADER / TOOLBAR -->
+         <ion-header>
+            <ion-toolbar color="primary">
+               <!-- Toolbar - Search button -->
+               <ion-buttons slot="secondary">
+                  <ion-button style="background-color: rgb(255, 233, 110)">
+                     <a href="/App/Index.html">
+                        <ion-icon slot="icon-only" name="search"></ion-icon>
+                     </a>
+                  </ion-button>
+               </ion-buttons>
+               <!-- Toolbar - More info button -->
+               <ion-buttons slot="primary">
+                  <ion-button onclick="openSAYellowMenu()">
+                     <ion-icon slot="icon-only" name="more"></ion-icon>
+                  </ion-button>
+               </ion-buttons>
+               <!-- Toolbar - Search button -->
+               <ion-title>Default Button</ion-title>
+            </ion-toolbar>
+         </ion-header>
+         <!-- CONTENT -->
+         <ion-content fullscreen>
+            <!-- Ionic Grid -->
+            <h1>Ionic Grid</h1>
+            <ion-grid>
+               <ion-row class="ion-padding-bottom">
+                  <ion-col style="background-color: cornflowerblue"> ion-col </ion-col>
+                  <ion-col style="background-color: rgb(142, 149, 161)"> ion-col </ion-col>
+                  <ion-col style="background-color: rgb(21, 41, 78)"> ion-col </ion-col>
+                  <ion-col style="background-color: rgb(159, 192, 253)"> ion-col </ion-col>
+               </ion-row>
+               <ion-row class="ion-padding-bottom">
+                  <ion-col style="background-color: cornflowerblue" size="6"> ion-col [size="6"] </ion-col>
+                  <ion-col style="background-color: rgb(142, 149, 161)"> ion-col </ion-col>
+                  <ion-col style="background-color: rgb(21, 41, 78)"> ion-col </ion-col>
+               </ion-row>
+               <ion-row class="ion-padding-bottom">
+                  <ion-col style="background-color: cornflowerblue" size="3"> ion-col [size="3"] </ion-col>
+                  <ion-col style="background-color: rgb(142, 149, 161)"> ion-col </ion-col>
+                  <ion-col style="background-color: rgb(21, 41, 78)" size="3"> ion-col [size="3"] </ion-col>
+               </ion-row>
+               <ion-row class="ion-padding-bottom">
+                  <ion-col style="background-color: cornflowerblue" size="3"> ion-col [size="3"] </ion-col>
+                  <ion-col style="background-color: rgb(142, 149, 161)" size="3" offset="3"> ion-col [size="3"] [offset="3"] </ion-col>
+               </ion-row>
+               <ion-row class="ion-padding-bottom">
+                  <ion-col style="background-color: cornflowerblue"> ion-col </ion-col>
+                  <ion-col style="background-color: rgb(142, 149, 161)"> ion-col <br># </ion-col>
+                  <ion-col style="background-color: rgb(21, 41, 78)"> ion-col <br># <br># </ion-col>
+                  <ion-col style="background-color: rgb(159, 192, 253)"> ion-col <br># <br># <br># </ion-col>
+               </ion-row>
+               <ion-row class="ion-padding-bottom">
+                  <ion-col style="background-color: cornflowerblue" align-self-start class="ion-padding-bottom"> ion-col [start] </ion-col>
+                  <ion-col style="background-color: rgb(142, 149, 161)" align-self-center> ion-col [center] </ion-col>
+                  <ion-col style="background-color: rgb(21, 41, 78)" align-self-end> ion-col [end] </ion-col>
+                  <ion-col style="background-color: rgb(159, 192, 253)"> ion-col <br># <br># </ion-col>
+               </ion-row>
+               <ion-row align-items-start class="ion-padding-bottom">
+                  <ion-col style="background-color: cornflowerblue"> [start] ion-col </ion-col>
+                  <ion-col style="background-color: rgb(142, 149, 161)"> [start] ion-col </ion-col>
+                  <ion-col style="background-color: rgb(21, 41, 78)" align-self-end> [start] ion-col [end] </ion-col>
+                  <ion-col style="background-color: rgb(159, 192, 253)"> ion-col <br># <br># </ion-col>
+               </ion-row>
+               <ion-row align-items-center class="ion-padding-bottom">
+                  <ion-col style="background-color: cornflowerblue"> [center] ion-col </ion-col>
+                  <ion-col style="background-color: rgb(142, 149, 161)"> [center] ion-col </ion-col>
+                  <ion-col style="background-color: rgb(21, 41, 78)"> [center] ion-col </ion-col>
+                  <ion-col style="background-color: rgb(159, 192, 253)"> ion-col <br># <br># </ion-col>
+               </ion-row>
+               <ion-row align-items-end class="ion-padding-bottom">
+                  <ion-col style="background-color: cornflowerblue"> [end] ion-col </ion-col>
+                  <ion-col style="background-color: rgb(142, 149, 161)" align-self-start> [end] ion-col [start] </ion-col>
+                  <ion-col style="background-color: rgb(21, 41, 78)"> [end] ion-col </ion-col>
+                  <ion-col style="background-color: rgb(159, 192, 253)"> ion-col <br># <br># </ion-col>
+               </ion-row>
+               <ion-row class="ion-padding-bottom">
+                  <ion-col style="background-color: cornflowerblue" size="12" size-sm> ion-col [size="12"] [size-sm] </ion-col>
+                  <ion-col style="background-color: rgb(142, 149, 161)" size="12" size-sm> ion-col [size="12"] [size-sm] </ion-col>
+                  <ion-col style="background-color: rgb(21, 41, 78)" size="12" size-sm> ion-col [size="12"] [size-sm] </ion-col>
+                  <ion-col style="background-color: rgb(159, 192, 253)" size="12" size-sm> ion-col [size="12"] [size-sm] </ion-col>
+               </ion-row>
+               <ion-row class="ion-padding-bottom">
+                  <ion-col style="background-color: cornflowerblue" size="12" size-md> ion-col [size="12"] [size-md] </ion-col>
+                  <ion-col style="background-color: rgb(142, 149, 161)" size="12" size-md> ion-col [size="12"] [size-md] </ion-col>
+                  <ion-col style="background-color: rgb(21, 41, 78)" size="12" size-md> ion-col [size="12"] [size-md] </ion-col>
+                  <ion-col style="background-color: rgb(159, 192, 253)" size="12" size-md> ion-col [size="12"] [size-md] </ion-col>
+               </ion-row>
+               <ion-row class="ion-padding-bottom">
+                  <ion-col style="background-color: cornflowerblue" size="6" size-lg offset="3"> ion-col [size="6"] [size-lg] [offset="3"] </ion-col>
+                  <ion-col style="background-color: rgb(142, 149, 161)" size="3" size-lg> ion-col [size="3"] [size-lg] </ion-col>
+               </ion-row>
+               <ion-row class="ion-padding-bottom">
+                  <ion-col style="background-color: cornflowerblue" align-self-start> ion-col [start] </ion-col>
+                  <ion-col style="background-color: rgb(142, 149, 161)" align-self-center> ion-col [center] </ion-col>
+                  <ion-col style="background-color: rgb(21, 41, 78)" align-self-end> ion-col [end] </ion-col>
+                  <ion-col style="background-color: rgb(159, 192, 253)"> ion-col <br># <br># </ion-col>
+               </ion-row>
+            </ion-grid><br>
+            <ion-grid>
+               <ion-row>
+                  <ion-col class="ion-padding" style="background-color: cornflowerblue">
+                     <div> padding </div>
+                  </ion-col>
+                  <ion-col class="ion-padding-top" style="background-color: rgb(142, 149, 161)">
+                     <div> padding-top </div>
+                  </ion-col>
+                  <ion-col class="ion-padding-start" style="background-color: rgb(21, 41, 78)" align-self-end>
+                     <div> padding-start </div>
+                  </ion-col>
+                  <ion-col class="ion-padding-end" style="background-color: rgb(159, 192, 253)">
+                     <div> padding-end </div>
+                  </ion-col>
+               </ion-row>
+               <ion-row>
+                  <ion-col class="ion-padding-bottom" class="ion-padding" style="background-color: cornflowerblue">
+                     <div> padding-bottom </div>
+                  </ion-col>
+                  <ion-col class="ion-padding-vertical" style="background-color: rgb(142, 149, 161)">
+                     <div> padding-vertical </div>
+                  </ion-col>
+                  <ion-col class="ion-padding-horizontal" style="background-color: rgb(21, 41, 78)">
+                     <div> padding-horizontal </div>
+                  </ion-col>
+                  <ion-col class="ion-no-padding" style="background-color: rgb(159, 192, 253)">
+                     <div> no-padding </div>
+                  </ion-col>
+               </ion-row>
+            </ion-grid><br>
+            <ion-grid>
+               <ion-row>
+                  <ion-col class="ion-margin" style="background-color: cornflowerblue">
+                     <div> margin </div>
+                  </ion-col>
+                  <ion-col class="ion-margin-top" style="background-color: rgb(142, 149, 161)">
+                     <div> margin-top </div>
+                  </ion-col>
+                  <ion-col class="ion-margin-start" style="background-color: rgb(21, 41, 78)">
+                     <div> margin-start </div>
+                  </ion-col>
+                  <ion-col class="ion-margin-end" style="background-color: rgb(159, 192, 253)">
+                     <div> margin-end </div>
+                  </ion-col>
+               </ion-row>
+               <ion-row>
+                  <ion-col class="ion-margin-bottom" style="background-color: cornflowerblue">
+                     <div> margin-bottom </div>
+                  </ion-col>
+                  <ion-col class="ion-margin-vertical" style="background-color: rgb(142, 149, 161)">
+                     <div> margin-vertical </div>
+                  </ion-col>
+                  <ion-col class="ion-margin-horizontal" style="background-color: rgb(21, 41, 78)">
+                     <div> margin-horizontal </div>
+                  </ion-col>
+                  <ion-col class="ion-no-margin" style="background-color: rgb(159, 192, 253)">
+                     <div> no-margin </div>
+                  </ion-col>
+               </ion-row>
+            </ion-grid>
+         </ion-content>
+      </div>
+      <!-- SIDE MENU -->
+      <ion-menu side="end" type="push" menu-id="saYellowMenu">
+         <ion-header>
+            <ion-toolbar color="primary">
+               <ion-title>Menu</ion-title>
+            </ion-toolbar>
+         </ion-header>
+         <ion-content>
+            <ion-list>
+               <ion-item href="../App/Index.html">
+                  <ion-label><span>
+                        <ion-icon name="home" slot="start"></ion-icon>
+                     </span>Home</ion-label>
+               </ion-item>
+               <ion-item href="../App/Search/SearchResults.html">
+                  <ion-label><span>
+                        <ion-icon name="home" slot="start"></ion-icon>
+                     </span>Search Resultsatest</ion-label>
+               </ion-item>
+               <ion-item href="../App/Search/ClientProfile.html">
+                  <ion-label><span>
+                        <ion-icon name="home" slot="start"></ion-icon>
+                     </span>Client Profile</ion-label>
+               </ion-item>
+               <ion-item href="../App/Support/SignIn.html">
+                  <ion-label><span>
+                        <ion-icon name="home" slot="start"></ion-icon>
+                     </span>Sign In</ion-label>
+               </ion-item>
+               <ion-item href="../App/Support/LostPassword.html">
+                  <ion-label><span>
+                        <ion-icon name="home" slot="start"></ion-icon>
+                     </span>LostPassword</ion-label>
+               </ion-item>
+               <ion-item href="../App/Support/Register.html">
+                  <ion-label><span>
+                        <ion-icon name="home" slot="start"></ion-icon>
+                     </span>Register</ion-label>
+               </ion-item>
+               <ion-item href="../App/Grid.html">
+                  <ion-label><span>
+                        <ion-icon name="home" slot="start"></ion-icon>
+                     </span>Grid</ion-label>
+               </ion-item>
+               <ion-item href="../App/Input.html">
+                  <ion-label><span>
+                        <ion-icon name="home" slot="start"></ion-icon>
+                     </span>Input</ion-label>
+               </ion-item>
+               <ion-item href="../App/Slides.html">
+                  <ion-label><span>
+                        <ion-icon name="home" slot="start"></ion-icon>
+                     </span>Slides</ion-label>
+               </ion-item>
+               <ion-item href="../App/Test.html">
+                  <ion-label><span>
+                        <ion-icon name="home" slot="start"></ion-icon>
+                     </span>Test</ion-label>
+               </ion-item>
+            </ion-list>
+         </ion-content>
+      </ion-menu>
+   </ion-app>
+   <ion-menu-controller></ion-menu-controller>
+</body>
+<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+<script>
+   const menuCtrl = document.querySelector('ion-menu-controller');
+
+   function openSAYellowMenu() {
+      menuCtrl.open('saYellowMenu');
+   }
+</script>
+
+</html>

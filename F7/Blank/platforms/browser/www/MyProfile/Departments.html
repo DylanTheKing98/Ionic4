@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@4.7.4/dist/ionic/ionic.esm.js"></script>
+   <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@4.7.4/dist/ionic/ionic.js"></script>
+   <link rel="stylesheet" href="../Assets/Ionic.css">
+   <link rel="stylesheet" href="../Assets/myAppCSS.css">
+</head>
+
+<body>
+   <ion-app class="md ion-page hydrated">
+      <div main>
+         <!-- HEADER / TOOLBAR -->
+         <ion-header>
+            <ion-toolbar color="primary">
+               <!-- Toolbar - Search button -->
+               <ion-buttons slot="secondary">
+                  <ion-button style="background-color: rgb(255, 233, 110)">
+                     <a href="/App/Index.html">
+                        <ion-icon slot="icon-only" name="search"></ion-icon>
+                     </a>
+                  </ion-button>
+               </ion-buttons>
+               <!-- Toolbar - More info button -->
+               <ion-buttons slot="primary">
+                  <ion-button onclick="openSAYellowMenu()">
+                     <ion-icon slot="icon-only" name="more"></ion-icon>
+                  </ion-button>
+               </ion-buttons>
+               <!-- Toolbar Title -->
+               <ion-title>saYellow.com</ion-title>
+            </ion-toolbar>
+         </ion-header>
+         <!-- CONTENT -->
+         <ion-content fullscreen>
+            <!-- TABS CONTENT - SEARCH TAB -->
+            <ion-tabs>
+               <ion-tab tab="tab-search">
+                  <ion-header translucent>
+                     <ion-toolbar>
+                        <ion-title>Search</ion-title>
+                     </ion-toolbar>
+                  </ion-header>
+                  <ion-content fullscreen class="ion-padding">
+                     <!-- BLANK CONTENT -->
+                     <h1>Blank heading</h1>
+                     <ion-grid>
+                        <ion-row class="ion-margin-bottom">
+                           <ion-col class="ion-padding light-border ion-text-center"> test </ion-col>
+                           <ion-col class="ion-padding light-border ion-text-center" offset="1"> test </ion-col>
+                        </ion-row>
+                     </ion-grid>
+                  </ion-content>
+               </ion-tab>
+               <!-- TABS CONTENT - SHORTLIST TAB -->
+               <ion-tab tab="tab-shortlist">
+                  <ion-header translucent>
+                     <ion-toolbar>
+                        <ion-title>Shortlist</ion-title>
+                     </ion-toolbar>
+                  </ion-header>
+                  <ion-content fullscreen class="ion-padding">
+                     <h1>Shortlist content</h1>
+                  </ion-content>
+               </ion-tab>
+               <!-- TABS CONTENT - PROFILE TAB -->
+               <ion-tab tab="tab-profile" component="page-map">
+                  <ion-header translucent>
+                     <ion-toolbar>
+                        <ion-title>Profile</ion-title>
+                     </ion-toolbar>
+                  </ion-header>
+                  <ion-content fullscreen class="ion-padding">
+                     <h1>Profile content</h1>
+                  </ion-content>
+               </ion-tab>
+               <!-- TABS CONTENT - ABOUT TAB -->
+               <ion-tab tab="tab-about" component="page-about">
+                  <ion-header translucent>
+                     <ion-toolbar>
+                        <ion-title>About</ion-title>
+                     </ion-toolbar>
+                  </ion-header>
+                  <ion-content fullscreen class="ion-padding">
+                     <h1>About content</h1>
+                  </ion-content>
+               </ion-tab>
+               <!-- TABS - BOTTOM BAR MENU -->
+               <ion-tab-bar slot="bottom">
+                  <ion-tab-button tab="tab-search">
+                     <ion-icon name="search"></ion-icon>
+                     <ion-label>Search</ion-label>
+                  </ion-tab-button>
+                  <ion-tab-button tab="tab-shortlist">
+                     <ion-icon name="contacts"></ion-icon>
+                     <ion-label>Shortlist</ion-label>
+                     <ion-badge color="secondary">6</ion-badge>
+                  </ion-tab-button>
+                  <ion-tab-button tab="tab-profile">
+                     <ion-icon name="map"></ion-icon>
+                     <ion-label>Profile</ion-label>
+                  </ion-tab-button>
+                  <ion-tab-button tab="tab-about">
+                     <ion-icon name="information-circle"></ion-icon>
+                     <ion-label>About</ion-label>
+                  </ion-tab-button>
+               </ion-tab-bar>
+            </ion-tabs>
+         </ion-content>
+         <!-- End of Content -->
+      </div>
+      <!-- SIDE MENU -->
+      <ion-menu side="end" type="push" menu-id="saYellowMenu">
+         <ion-header>
+            <ion-toolbar color="primary">
+               <ion-title>Menu</ion-title>
+            </ion-toolbar>
+         </ion-header>
+         <ion-content>
+            <ion-list>
+               <ion-item href="MyProfile.html">
+                  <ion-label><span>
+                        <ion-icon name="home" slot="start"></ion-icon>
+                     </span>Home</ion-label>
+               </ion-item>
+               <ion-item href="CompanyDetails.html">
+                  <ion-label><span>
+                        <ion-icon name="home" slot="start"></ion-icon>
+                     </span>Company Details</ion-label>
+               </ion-item>
+               <ion-item href="ClientCampaigns.html">
+                  <ion-label><span>
+                        <ion-icon name="home" slot="start"></ion-icon>
+                     </span>Ad Campaigns</ion-label>
+               </ion-item>
+               <ion-item href="BusinessHours.html">
+                  <ion-label><span>
+                        <ion-icon name="home" slot="start"></ion-icon>
+                     </span>Business Hours</ion-label>
+               </ion-item>
+               <ion-item href="Departments.html">
+                  <ion-label><span>
+                        <ion-icon name="home" slot="start"></ion-icon>
+                     </span>Contact Persons</ion-label>
+               </ion-item>
+               <ion-item href="SocialMediaLinks.html">
+                  <ion-label><span>
+                        <ion-icon name="home" slot="start"></ion-icon>
+                     </span>Social Media</ion-label>
+               </ion-item>
+               <ion-item href="Stats.html">
+                  <ion-label><span>
+                        <ion-icon name="home" slot="start"></ion-icon>
+                     </span>Listing Performance</ion-label>
+               </ion-item>
+               <ion-item href="Artwork.html">
+                  <ion-label><span>
+                        <ion-icon name="home" slot="start"></ion-icon>
+                     </span>Artwork</ion-label>
+               </ion-item>
+               <ion-item href="SocialMediaSharing.html">
+                  <ion-label><span>
+                        <ion-icon name="home" slot="start"></ion-icon>
+                     </span>Share on Facebook</ion-label>
+               </ion-item>
+            </ion-list>
+         </ion-content>
+      </ion-menu>
+      <!-- End of Side Menu -->
+   </ion-app>
+   <ion-menu-controller></ion-menu-controller>
+</body>
+<script>
+   const menuCtrl = document.querySelector('ion-menu-controller');
+
+   function openSAYellowMenu() {
+      menuCtrl.open('saYellowMenu');
+   }
+</script>
+
+</html>

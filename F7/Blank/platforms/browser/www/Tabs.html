@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@4.7.4/dist/ionic/ionic.esm.js"></script>
+   <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@4.7.4/dist/ionic/ionic.js"></script>
+   <link rel="stylesheet" href="Assets/Ionic.css">
+   <link rel="stylesheet" href="Assets/myAppCSS.css">
+</head>
+<style>
+   :root {
+      --ion-safe-area-top: 10px;
+      --ion-safe-area-bottom: 12px;
+   }
+
+   .my-custom-menu {
+      --width: 500px;
+   }
+</style>
+
+<body>
+   <ion-app class="md ion-page hydrated">
+      <div main>
+         <!-- HEADER / TOOLBAR -->
+         <ion-header>
+            <ion-toolbar color="primary">
+               <!-- Toolbar - Search button -->
+               <ion-buttons slot="secondary">
+                  <ion-button style="background-color: rgb(255, 233, 110)">
+                     <a href="/App/Index.html">
+                        <ion-icon slot="icon-only" name="search"></ion-icon>
+                     </a>
+                  </ion-button>
+               </ion-buttons>
+               <!-- Toolbar - More info button -->
+               <ion-buttons slot="primary">
+                  <ion-button onclick="openSAYellowMenu()">
+                     <ion-icon slot="icon-only" name="more"></ion-icon>
+                  </ion-button>
+               </ion-buttons>
+               <!-- Toolbar Title -->
+               <ion-title>saYellow.com</ion-title>
+            </ion-toolbar>
+         </ion-header>
+         <!-- CONTENT -->
+         <ion-content fullscreen>
+            <!-- Tabs Content -->
+            <ion-tabs>
+               <ion-tab tab="tab-schedule">
+                  <ion-header translucent>
+                     <ion-toolbar>
+                        <ion-title>Scedule</ion-title>
+                     </ion-toolbar>
+                  </ion-header>
+                  <ion-content fullscreen class="ion-padding">
+                     <h1>Scedule content</h1>
+                  </ion-content>
+               </ion-tab>
+               <ion-tab tab="tab-speaker">
+                  <ion-header translucent>
+                     <ion-toolbar>
+                        <ion-title>Speakers</ion-title>
+                     </ion-toolbar>
+                  </ion-header>
+                  <ion-content fullscreen class="ion-padding">
+                     <h1>Speakers content</h1>
+                  </ion-content>
+               </ion-tab>
+               <ion-tab tab="tab-map" component="page-map">
+                  <ion-header translucent>
+                     <ion-toolbar>
+                        <ion-title>Map</ion-title>
+                     </ion-toolbar>
+                  </ion-header>
+                  <ion-content fullscreen class="ion-padding">
+                     <h1>Map content</h1>
+                  </ion-content>
+               </ion-tab>
+               <ion-tab tab="tab-about" component="page-about">
+                  <ion-header translucent>
+                     <ion-toolbar>
+                        <ion-title>About</ion-title>
+                     </ion-toolbar>
+                  </ion-header>
+                  <ion-content fullscreen class="ion-padding">
+                     <h1>About content</h1>
+                  </ion-content>
+               </ion-tab>
+               <!-- Tabs bottom bar -->
+               <ion-tab-bar slot="bottom">
+                  <ion-tab-button tab="tab-schedule">
+                     <ion-icon name="calendar"></ion-icon>
+                     <ion-label>Schedule</ion-label>
+                     <ion-badge>6</ion-badge>
+                  </ion-tab-button>
+                  <ion-tab-button tab="tab-speaker">
+                     <ion-icon name="contacts"></ion-icon>
+                     <ion-label>Speakers</ion-label>
+                  </ion-tab-button>
+                  <ion-tab-button tab="tab-map">
+                     <ion-icon name="map"></ion-icon>
+                     <ion-label>Map</ion-label>
+                  </ion-tab-button>
+                  <ion-tab-button tab="tab-about">
+                     <ion-icon name="information-circle"></ion-icon>
+                     <ion-label>About</ion-label>
+                  </ion-tab-button>
+               </ion-tab-bar>
+            </ion-tabs>
+         </ion-content>
+         <!-- End of Content -->
+      </div>
+      <!-- SIDE MENU -->
+      <ion-menu side="end" type="push" menu-id="saYellowMenu">
+         <ion-header>
+            <ion-toolbar color="primary">
+               <ion-title>Menu</ion-title>
+            </ion-toolbar>
+         </ion-header>
+         <ion-content>
+            <ion-list>
+               <ion-item href="Index.html">
+                  <ion-label><span>
+                        <ion-icon name="home" slot="start"></ion-icon>
+                     </span>Home</ion-label>
+               </ion-item>
+               <ion-item href="../App/Search/SearchResults.html">
+                  <ion-label><span>
+                        <ion-icon name="home" slot="start"></ion-icon>
+                     </span>Search Resultsatest</ion-label>
+               </ion-item>
+               <ion-item href="../App/Search/ClientProfile.html">
+                  <ion-label><span>
+                        <ion-icon name="home" slot="start"></ion-icon>
+                     </span>Client Profile</ion-label>
+               </ion-item>
+               <ion-item href="../App/Support/SignIn.html">
+                  <ion-label><span>
+                        <ion-icon name="home" slot="start"></ion-icon>
+                     </span>Sign In</ion-label>
+               </ion-item>
+               <ion-item href="../App/Support/LostPassword.html">
+                  <ion-label><span>
+                        <ion-icon name="home" slot="start"></ion-icon>
+                     </span>LostPassword</ion-label>
+               </ion-item>
+               <ion-item href="../App/Support/Register.html">
+                  <ion-label><span>
+                        <ion-icon name="home" slot="start"></ion-icon>
+                     </span>Register</ion-label>
+               </ion-item>
+               <ion-item href="../App/Grid.html">
+                  <ion-label><span>
+                        <ion-icon name="home" slot="start"></ion-icon>
+                     </span>Grid</ion-label>
+               </ion-item>
+               <ion-item href="../App/Input.html">
+                  <ion-label><span>
+                        <ion-icon name="home" slot="start"></ion-icon>
+                     </span>Input</ion-label>
+               </ion-item>
+               <ion-item href="../App/Slides.html">
+                  <ion-label><span>
+                        <ion-icon name="home" slot="start"></ion-icon>
+                     </span>Slides</ion-label>
+               </ion-item>
+               <ion-item href="../App/Tabs.html">
+                  <ion-label><span>
+                        <ion-icon name="home" slot="start"></ion-icon>
+                     </span>Tabs</ion-label>
+               </ion-item>
+            </ion-list>
+         </ion-content>
+      </ion-menu>
+   </ion-app>
+   <ion-menu-controller></ion-menu-controller>
+</body>
+<script>
+   const menuCtrl = document.querySelector('ion-menu-controller');
+
+   function openSAYellowMenu() {
+      menuCtrl.open('saYellowMenu');
+   }
+</script>
+
+</html>
