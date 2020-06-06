@@ -2,7 +2,7 @@
 <widget id="com.sayellow.f7" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>saYellow Test</name>
     <description>
-        A basic Ionic 4 & PhoneGap App.
+        A basic Ionic 4 PhoneGap App.
     </description>
     <author email="dirk@sayellow.com" href="http://www.sayellow.com">
         saYellow Team

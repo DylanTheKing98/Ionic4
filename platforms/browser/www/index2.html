@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Menu</title>
+   <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+   <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@next/dist/ionic/ionic.esm.js"></script>
+   <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@next/dist/ionic/ionic.js"></script>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@next/css/ionic.bundle.css" />
+</head>
+
+<body>
+   <ion-app>
+      <ion-app>
+         <ion-tabs>
+            <ion-tab tab="home">
+               <h1>Home</h1>
+               <span id="home"></span>
+            </ion-tab>
+            <ion-tab tab="settings" component="page-map">
+               <ion-nav id="tt" onclick="pp()">
+                  <ion-button>Push Profile Page</ion-button>
+               </ion-nav>
+               <h1>Settings Content</h1>
+            </ion-tab>
+            <ion-tab-bar slot="bottom">
+               <ion-tab-button tab="home">
+                  <ion-label>Home</ion-label>
+                  <ion-icon name="home"></ion-icon>
+                  <ion-badge>6</ion-badge>
+               </ion-tab-button>
+               <ion-tab-button tab="settings">
+                  <ion-label>Settings</ion-label>
+                  <ion-icon name="settings"></ion-icon>
+                  <ion-nav animated="true" root="nav-home" swipeGesture="true"></ion-nav>
+               </ion-tab-button>
+            </ion-tab-bar>
+         </ion-tabs>
+         <ion-router>
+            <ion-route url="/" component="home"></ion-route>
+            <ion-route url="/" component="settings"></ion-route>
+         </ion-router>
+      </ion-app>
+   </ion-app>
+   <script>
+     function myFunc(){
+      $('#srcResults').load('https://www.sayellow.com/Dylan/login.html #pp');
+    }
+
+    function pp() {
+      $("#tt").pushStack() 
+    }
+  </script>
+</body>
+
+</html>
