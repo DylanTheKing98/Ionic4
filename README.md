@@ -7,4 +7,10 @@ Download & Extract PhoneGap Desktop App (The default one on their website did no
 
 iOS PhoneGap Developer Mobile App https://blog.phonegap.com/update-on-the-phonegap-developer-app-ios-99e07e3309dd for android you can install from Google Play
 
+WebSite Found:
 
+https://medium.com/@david.dalbusco/using-ionic-without-any-frameworks-775dc757e5e8
+
+https://www.joshmorony.com/stack-based-navigation-push-pop-with-ionic-web-components/  (Background Info)
+
+https://www.joshmorony.com/topics/ionic-tutorials/ (Not all relevant to vanilla but good background info)
