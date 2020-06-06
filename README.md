@@ -1,7 +1,7 @@
 # Ionic4
 Ionic 4 - Vanilla Javascript Example  (https://ionicframework.com/docs/components)
 
-Using Adobe PhoneGap Developer Desktop & Mobile Apps to Test https://phonegap.com/
+Using Adobe PhoneGap Developer Desktop & Mobile Apps to Test & Compile https://phonegap.com/
 
 Download & Extract PhoneGap Desktop App (The default one on their website did not work for me) https://1drv.ms/u/s!AlfeCLUWjs1UvGDLmykF4DMSwB4y?e=gngxPs thanks to passariello in https://github.com/phonegap/phonegap-app-desktop/issues/739
 
